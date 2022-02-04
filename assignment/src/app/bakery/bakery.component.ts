@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonServiceService } from '../SharedServices/common-service.service';
 
 @Component({
   selector: 'app-bakery',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BakeryComponent implements OnInit {
 
-  constructor() { }
+  public bakeryItems = [];
+
+  constructor(
+    private commonService : CommonServiceService
+  ) { }
 
   ngOnInit() {
+    this.loadBakeryList();
+  }
+
+  loadBakeryList(){
+    this.commonService.getBakeryList().subscribe(data => {
+      this.bakeryItems = data;
+     });
   }
 
 }
