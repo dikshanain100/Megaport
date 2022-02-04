@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'bakery',
+    path: '',
     loadChildren: () =>import('./bakery/bakery.module').then(m => m.BakeryModule)
   },
   {

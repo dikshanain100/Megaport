@@ -9,6 +9,7 @@ import { CommonServiceService } from '../SharedServices/common-service.service';
 export class BakeryComponent implements OnInit {
 
   public bakeryItems = [];
+  public searchValue : string; 
 
   constructor(
     private commonService : CommonServiceService
@@ -32,4 +33,15 @@ export class BakeryComponent implements OnInit {
   sortByDesc(value){
     this.bakeryItems.sort((a, b) =>(a[value] > b[value] ? -1 : 1));
   }
+
+  // search(){
+  //   if(this.searchText == ""){
+  //     this.ngOnInit();
+  //   }
+  //   else{
+  //     this.bakeryItems = this.bakeryItems.filter(res =>{
+  //       return res.
+  //     })
+  //   }
+  // }
 }
