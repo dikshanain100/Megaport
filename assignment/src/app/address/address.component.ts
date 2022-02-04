@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddressComponent implements OnInit {
 
+  public searchValue: string;
+  public valueSearched : string;
+  public megaObject;
+
   constructor() { }
 
   ngOnInit() {
-    var megaObject = {
+    this.megaObject = {
       name: 'Megaport',
       address: {
         office: {
@@ -27,15 +31,16 @@ export class AddressComponent implements OnInit {
         asxListed: true,
       },
     }
-      ;
-
-    let value = this.findValue(megaObject, 'industry.asxListed');  //set the path here as second parameter
-    console.log('value : ', value);   //this is your result
+      ; 
 
   }
 
+  search(){
+    this.valueSearched =  this.searchInObject(this.megaObject, this.searchValue); 
+  }
+
   // function to find the value of requested path
-  findValue(object, searchPath) {
+  searchInObject(object, searchPath) {
     var array = searchPath.split('.'); // create an array by spliting path 
     for (let i = 0; i < array.length; i++) {
       var k = array[i];  

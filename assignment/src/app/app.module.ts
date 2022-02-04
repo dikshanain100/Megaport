@@ -16,8 +16,7 @@ import { BakeryModule } from './bakery/bakery.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   exports : [SharedModule],

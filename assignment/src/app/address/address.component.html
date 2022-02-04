@@ -1,3 +1,25 @@
-<p>
-  address works!
-</p>
+<div class="row ml-2 mb-2">
+  <div class="col-12">
+    <h4 class="title">Object Fetching</h4>
+  </div>
+</div>
+
+<!-- search -->
+<div class="row search">
+  <div class="col-6">
+    <h6>Object Used :</h6>
+    <div class="col-3">
+      <img src="/assets/jsonObject.PNG" class="object">
+    </div>
+  </div>
+  <div class="col-6">
+    <nav class="navbar">
+      <div class="col-8">
+        <input type="text" [(ngModel)]="searchValue" class="form-control" id="search"
+          placeholder="Enter the object path; eg: industry.asxListed">
+      </div>
+    </nav>
+    <button type="button" class="btn" (click) = "search()">Search</button>
+     Searched Value : {{valueSearched}}
+  </div>
+</div>

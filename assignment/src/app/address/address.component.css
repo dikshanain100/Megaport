@@ -1,0 +1,23 @@
+.title {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top : 12px;
+    color : #2e2e2e;
+}
+
+
+.object {
+    margin-left: 12px;
+}
+
+.search{
+    margin-left: 12px;
+}
+
+.btn{
+    background-color: cadetblue;
+}
+
+/* .button-header{
+    float:right;
+} */
