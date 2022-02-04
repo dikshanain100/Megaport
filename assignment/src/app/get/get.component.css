@@ -1,0 +1,33 @@
+.table {
+    margin-bottom: 0px !important;
+}
+
+.table thead tr {
+    color: #787878;
+    text-align: center;
+}
+
+.table tbody tr {
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.table content {
+    color: #323232;
+    cursor: pointer;
+}
+
+th {
+    position: sticky;
+    background-color: white;
+    top: 0;
+}
+
+.tableWrapper {
+    position: relative;
+    overflow: auto;
+    border-radius: 2px !important;
+    overflow-y: visible;
+    max-height: 300px;
+}

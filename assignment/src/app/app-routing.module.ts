@@ -4,15 +4,24 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>import('./bakery/bakery.module').then(m => m.BakeryModule)
+    redirectTo: 'bakery',
+    pathMatch: 'full'
+  },
+  {
+    path: 'bakery',
+    loadChildren: () => import('./bakery/bakery.module').then(m => m.BakeryModule)
   },
   {
     path: 'address',
-    loadChildren: () =>import('./address/address.module').then(m => m.AddressModule)
+    loadChildren: () => import('./address/address.module').then(m => m.AddressModule)
   },
   {
     path: 'get',
-    loadChildren: () =>import('./get/get.module').then(m => m.GetModule)
+    loadChildren: () => import('./get/get.module').then(m => m.GetModule)
+  },
+  { 
+    path: '**', 
+    redirectTo: ''
   }
 ];
 

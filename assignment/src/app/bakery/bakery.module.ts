@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     BakeryRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
   ],
   exports :[BakeryComponent]
 })

@@ -1,3 +1,25 @@
-<p>
-  get works!
-</p>
+<div class="ml-3 mr-3 rounded" *ngIf="(tableData.length > 0)">
+    <div class="tableWrapper">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th *ngFor="let header of tableHeader">
+                        {{header.name}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let item of tableData">
+                    <td>{{item.id}}</td>
+                    <td>{{item.country}}</td>
+                    <td>{{item.metro}}</td>
+                    <td>{{item.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!foundError">
+    <p>{{error}}</p>
+</div>

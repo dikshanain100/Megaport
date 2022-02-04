@@ -9,39 +9,30 @@ import { CommonServiceService } from '../SharedServices/common-service.service';
 export class BakeryComponent implements OnInit {
 
   public bakeryItems = [];
-  public searchValue : string; 
+  public searchValue: string;
 
   constructor(
-    private commonService : CommonServiceService
+    private commonService: CommonServiceService
   ) { }
 
   ngOnInit() {
     this.loadBakeryList();
   }
 
-  loadBakeryList(){
+  loadBakeryList() {
     this.commonService.getBakeryList().subscribe(data => {
       this.bakeryItems = data;
-     });
+    });
   }
 
-  sortByAsc(value){
-    this.bakeryItems.sort((a, b) =>(a[value] > b[value] ? 1 : -1));
+  // sort table column in ascending based on column name
+  sortByAsc(value) {
+    this.bakeryItems.sort((a, b) => (a[value] > b[value] ? 1 : -1));
   }
 
-
-  sortByDesc(value){
-    this.bakeryItems.sort((a, b) =>(a[value] > b[value] ? -1 : 1));
+  // sort table column in descending based on column name
+  sortByDesc(value) {
+    this.bakeryItems.sort((a, b) => (a[value] > b[value] ? -1 : 1));
   }
 
-  // search(){
-  //   if(this.searchText == ""){
-  //     this.ngOnInit();
-  //   }
-  //   else{
-  //     this.bakeryItems = this.bakeryItems.filter(res =>{
-  //       return res.
-  //     })
-  //   }
-  // }
 }
