@@ -38,7 +38,8 @@ export class GetComponent implements OnInit {
             item.diversityZones.megaport
           )
 
-          this.foundError = false;
+         this.foundError = false;
+        
         }
         else {
           this.foundError = true;

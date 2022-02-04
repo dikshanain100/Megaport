@@ -1,38 +1,42 @@
-<div class="row ml-2 mb-2">
-    <div class="col-6 offset-md-1">
-        <h1 class="title">Megaport Details</h1>
+<div class="main">
+    <div class="row ml-2 mb-2">
+        <div class="col-12">
+            <h4 class="title">Megaport Details</h4>
+        </div>
     </div>
-</div>
 
 
-<div class="row ml-2">
-    <div class="col-8 offset-md-1">
-
-        <div class="ml-3 mr-3 rounded" *ngIf="(tableData.length > 0 && !foundError)">
-            <div class="tableWrapper">
-                <table class="table border">
-                    <thead>
-                        <tr>
-                            <th *ngFor="let header of tableHeader">
-                                {{header.name}}
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr *ngFor="let item of tableData">
-                            <td>{{item.id}}</td>
-                            <td>{{item.country}}</td>
-                            <td>{{item.metro}}</td>
-                            <td>{{item.name}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div class="row ml-2">
+        <div class="col-10 offset-md-1">
+            <div class="ml-3 mr-3 rounded" *ngIf="(tableData.length > 0 && !foundError)">
+                <div class="tableWrapper">
+                    <table class="table border">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let header of tableHeader">
+                                    {{header.name}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr *ngFor="let item of tableData">
+                                <td>{{item.id}}</td>
+                                <td>{{item.country}}</td>
+                                <td>{{item.metro}}</td>
+                                <td>{{item.name}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div *ngIf="foundError">
+        <div class="col-6 offset-md-2">
+            <img src="/assets/noRecordFound.png" class="no-record">
+            <p>{{error}}</p>
         </div>
 
     </div>
-</div>
-
-<div *ngIf="foundError">
-    <p>{{error}}</p>
 </div>
