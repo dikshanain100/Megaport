@@ -1,0 +1,14 @@
+.blueColor {
+    background-color: #f7f7f7;
+    height: 30px;
+}
+
+.megaport-logo {
+    height: 40px;
+    margin-left: 12px;
+    margin-top: -12px;
+}
+
+.buttons-header {
+    float: right;
+}

@@ -1,9 +1,13 @@
+.title {
+    font-family: sans-serif;
+}
+
 .table {
     margin-bottom: 0px !important;
 }
 
 .table thead tr {
-    color: #787878;
+    color: black;
     text-align: center;
 }
 
@@ -20,7 +24,7 @@
 
 th {
     position: sticky;
-    background-color: white;
+    background-color: cadetblue;
     top: 0;
 }
 
@@ -29,5 +33,9 @@ th {
     overflow: auto;
     border-radius: 2px !important;
     overflow-y: visible;
-    max-height: 300px;
+    max-height: 350px;
+}
+
+.table>:not(:first-child) {
+    border-top: 2px !important;
 }
