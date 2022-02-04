@@ -6,11 +6,11 @@
 
 <div class="row ml-2">
   <div class="col-6 offset-md-2">
-    <table class="table table-striped border mt-1">
+    <table class="table table-striped table-bordered mt-1">
       <thead>
         <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Type</th>
+          <th scope="col" class="th-sm">Id<i class="bi bi-arrow-up" (click) = "sortByAsc('id')"></i><i class="bi bi-arrow-down" (click) = "sortByDesc('id')"></i></th> 
+          <th scope="col" class="th-sm">Type<i class="bi bi-arrow-up" (click) = "sortByAsc('type')"></i><i class="bi bi-arrow-down" (click) = "sortByDesc('type')"></i></th>
           <th scope="col">Name</th>
           <th scope="col">Topping</th>
         </tr>

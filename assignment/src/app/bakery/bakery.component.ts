@@ -24,4 +24,12 @@ export class BakeryComponent implements OnInit {
      });
   }
 
+  sortByAsc(value){
+    this.bakeryItems.sort((a, b) =>(a[value] > b[value] ? 1 : -1));
+  }
+
+
+  sortByDesc(value){
+    this.bakeryItems.sort((a, b) =>(a[value] > b[value] ? -1 : 1));
+  }
 }

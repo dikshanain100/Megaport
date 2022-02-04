@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommonServiceService {
-  private BAKERY_LIST = 'assets/db.json'
+  private BAKERY_LIST = 'assets/bakery.json'
 
   constructor(private http :HttpClient) {
    }
