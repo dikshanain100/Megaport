@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BakeryRoutingModule } from './bakery-routing.module';
 import { BakeryComponent } from './bakery.component';
 import { SharedModule } from '../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [BakeryComponent],
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
     BakeryRoutingModule,
     SharedModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   exports :[BakeryComponent]
 })

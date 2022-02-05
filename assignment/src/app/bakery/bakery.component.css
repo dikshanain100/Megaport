@@ -1,8 +1,8 @@
 .title {
     font-family: sans-serif;
     text-align: center;
-    margin-top : 12px;
-    color : #2e2e2e;
+    margin-top: 12px;
+    color: #2e2e2e;
 }
 
 .table {
@@ -36,9 +36,23 @@ th {
     overflow: auto;
     border-radius: 2px !important;
     overflow-y: visible;
-    max-height: 250px;
+    max-height: 350px;
+    margin-left: 40px;
 }
 
 .table>:not(:first-child) {
     border-top: 2px !important;
+}
+
+.form-header {
+    margin-left: inherit;
+}
+
+.search-header {
+    margin-left: 40px;
+}
+
+.btn-success{
+    float :right;
+    margin-top: 12px;;
 }
