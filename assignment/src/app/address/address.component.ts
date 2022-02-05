@@ -39,8 +39,6 @@ export class AddressComponent implements OnInit {
 
   search() {
     this.valueSearched = this.searchInObject(this.megaObject, this.searchValue);
-    // let found = this.findByKey(this.megaObject, this.searchValue);
-    // console.log('found :: ', found)
   }
 
   // function to find the value of requested path
@@ -56,24 +54,6 @@ export class AddressComponent implements OnInit {
     }
     return object;
   }
-
-  // find by key
-  findByKey(object, key) {
-    var value;
-    Object.keys(object).some(function (k) {
-      if (k === key) {
-        value = object[k];
-        return true;
-      }
-
-      if (object[k] && typeof object[k] === 'object') {
-        value = this.findByKey(object[k], key);
-        return value !== undefined;
-      }
-    });
-    return value;
-  }
-
 
 
 }
