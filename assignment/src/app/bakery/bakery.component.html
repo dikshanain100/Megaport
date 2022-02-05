@@ -55,41 +55,43 @@
             <div class="card-body">
                 <form class="form mr-2" [formGroup]="bakeryForm" (ngSubmit)="onSubmit()">
                     <div class="row">
-                    <div class="form-group col-12">
-                        <label>Id</label>
-                        <input type="text" class="form-control" formControlName="id">
-                        <span class="text-danger"
-                            *ngIf="(bakeryFormControl.id.touched || submitted) && bakeryFormControl.id.errors?.required">
-                            Id is required
-                        </span>
+                        <div class="form-group col-12">
+                            <label>Id</label>
+                            <input type="text" class="form-control" formControlName="id">
+                            <span class="text-danger"
+                                *ngIf="(bakeryFormControl.id.touched || submitted) && bakeryFormControl.id.errors?.required">
+                                Id is required
+                            </span>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Type</label>
+                            <input type="text" class="form-control" formControlName="type">
+                            <span class="text-danger"
+                                *ngIf="(bakeryFormControl.type.touched || submitted) && bakeryFormControl.type.errors?.required">
+                                Type is required
+                            </span>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name">
+                            <span class="text-danger"
+                                *ngIf="(bakeryFormControl.name.touched || submitted) && bakeryFormControl.name.errors?.required">
+                                Name is required
+                            </span>
+                        </div>
+                        <div class="form-group col-12">
+                            <label>Topping</label>
+                            <input type="text" class="form-control" formControlName="topping">
+                            <span class="text-danger"
+                                *ngIf="(bakeryFormControl.topping.touched || submitted) && bakeryFormControl.topping.errors?.required">
+                                Topping is required
+                            </span>
+                        </div>
                     </div>
-                    <div class="form-group col-12">
-                        <label>Type</label>
-                        <input type="text" class="form-control" formControlName="type">
-                        <span class="text-danger"
-                            *ngIf="(bakeryFormControl.type.touched || submitted) && bakeryFormControl.type.errors?.required">
-                            Type is required
-                        </span>
-                    </div>
-                    <div class="form-group col-12">
-                        <label>Name</label>
-                        <input type="text" class="form-control" formControlName="name">
-                        <span class="text-danger"
-                            *ngIf="(bakeryFormControl.name.touched || submitted) && bakeryFormControl.name.errors?.required">
-                            Name is required
-                        </span>
-                    </div>
-                    <div class="form-group col-12">
-                        <label>Topping</label>
-                        <input type="password" class="form-control" formControlName="topping">
-                        <span class="text-danger"
-                            *ngIf="(bakeryFormControl.topping.touched || submitted) && bakeryFormControl.topping.errors?.required">
-                            Topping is required
-                        </span>
-                    </div>
-                </div>
+              
                     <div class="form-group">
-                            <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-secondary" (click) = "resetForm()">Cancel</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                 </form>
             </div>

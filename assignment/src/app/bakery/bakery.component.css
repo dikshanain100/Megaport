@@ -52,7 +52,12 @@ th {
     margin-left: 40px;
 }
 
-.btn-success{
-    float :right;
-    margin-top: 12px;;
+.btn-success {
+    float: right;
+    margin-top: 12px;
+}
+
+.btn-secondary {
+    float: left;
+    margin-top: 12px;
 }

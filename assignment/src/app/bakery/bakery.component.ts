@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonServiceService } from '../SharedServices/common-service.service';
+import { Bakery } from './bakery';
 
 @Component({
   selector: 'app-bakery',
@@ -9,7 +10,7 @@ import { CommonServiceService } from '../SharedServices/common-service.service';
 })
 export class BakeryComponent implements OnInit {
 
-  public bakeryItems = [];
+  public bakeryItems: Bakery[] = [];
   public searchValue: string;
   public bakeryForm: FormGroup;
   public submitted = false;
@@ -25,12 +26,12 @@ export class BakeryComponent implements OnInit {
     this.createForm();
   }
 
-  createForm(){
+  createForm() {
     this.bakeryForm = this.fb.group({
       id: ['', Validators.required],
-      type: ['',  Validators.required],
-      name: ['',  Validators.required],
-      topping: ['',  Validators.required],
+      type: ['', Validators.required],
+      name: ['', Validators.required],
+      topping: ['', Validators.required],
     });
   }
 
@@ -43,8 +44,12 @@ export class BakeryComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.bakeryForm.valid) {
-      alert('Form Submitted succesfully!!!\n Check the values in browser console.');
       console.table(this.bakeryForm.value);
+      this.commonService.postBakeryItems(this.bakeryForm.value).subscribe(data => {
+        this.resetForm();
+        this.loadBakeryList();
+        alert('Bakery Item added succesfully!!!\n Item present at the bottom of table.');
+      });
     }
   }
 
@@ -64,4 +69,11 @@ export class BakeryComponent implements OnInit {
     this.bakeryItems.sort((a, b) => (a[value] > b[value] ? -1 : 1));
   }
 
+  // reset form
+  resetForm() {
+    this.bakeryForm.reset();
+    this.bakeryForm.markAsPristine();
+    this.bakeryForm.markAsUntouched();
+    this.submitted = false;
+  }
 }
