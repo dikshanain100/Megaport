@@ -287,42 +287,6 @@
       "type": "filled",
       "name": "Filled",
       "topping": "Regular Maple"
-    },
-    {
-      "id": "ret",
-      "type": "ret",
-      "name": "ert",
-      "topping": "ert"
-    },
-    {
-      "id": "wq",
-      "type": "wq",
-      "name": "qwe",
-      "topping": "wqe"
-    },
-    {
-      "id": "dfg",
-      "type": "fdh",
-      "name": "dfh",
-      "topping": "fdh"
-    },
-    {
-      "id": "-0-",
-      "type": "0=",
-      "name": "0=",
-      "topping": "-[0"
-    },
-    {
-      "id": "sa",
-      "type": "sadsa",
-      "name": "d",
-      "topping": "sd"
-    },
-    {
-      "id": "ewr",
-      "type": "ewr",
-      "name": "weew",
-      "topping": "r"
     }
   ]
 }
